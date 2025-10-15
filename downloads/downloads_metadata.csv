@@ -1,7 +1,7 @@
 filename,url,status,timestamp_utc
-,https://www.sec.gov/files/form10-k.pdf,failed: 403 Client Error: Forbidden for url: https://www.sec.gov/files/form10-k.pdf,2025-10-14T16:07:14.682131+00:00
-20251014T160716Z_f1040.pdf,https://www.irs.gov/pub/irs-pdf/f1040.pdf,success,2025-10-14T16:07:17.232565+00:00
-,https://www.cisa.gov/sites/default/files/publications/cisa-insights-ransomware-outbreak.pdf,failed: 503 Server Error: Service Unavailable for url: https://www.cisa.gov/sites/default/files/publications/cisa-insights-ransomware-outbreak.pdf,2025-10-14T16:07:28.638457+00:00
-,https://www.ftc.gov/system/files/ftc_gov/pdf/p042103_0.pdf,failed: 403 Client Error: Forbidden for url: https://www.ftc.gov/system/files/ftc_gov/pdf/p042103_0.pdf,2025-10-14T16:07:30.508629+00:00
-,https://www.faa.gov/sites/faa.gov/files/air_traffic/publications/atpubs/pcg/pcg_basic.pdf,failed: 404 Client Error: Not Found for url: https://www.faa.gov/sites/faa.gov/files/air_traffic/publications/atpubs/pcg/pcg_basic.pdf,2025-10-14T16:07:33.865002+00:00
-,https://www.nasa.gov/wp-content/uploads/2015/06/np-2015-03-015-jsc-orion-pg.pdf,failed: 404 Client Error: Not Found for url: https://www.nasa.gov/wp-content/uploads/2015/06/np-2015-03-015-jsc-orion-pg.pdf,2025-10-14T16:07:34.886181+00:00
+,https://www.sec.gov/files/form10-k.pdf,failed: 403 Client Error: Forbidden for url: https://www.sec.gov/files/form10-k.pdf,2025-10-14T16:45:48.342251+00:00
+20251014T164549Z_f1040.pdf,https://www.irs.gov/pub/irs-pdf/f1040.pdf,success,2025-10-14T16:45:50.647877+00:00
+,https://www.cisa.gov/sites/default/files/publications/cisa-insights-ransomware-outbreak.pdf,failed: 404 Client Error: Not Found for url: https://www.cisa.gov/sites/default/files/publications/cisa-insights-ransomware-outbreak.pdf,2025-10-14T16:45:51.482899+00:00
+,https://www.ftc.gov/system/files/ftc_gov/pdf/p042103_0.pdf,failed: 403 Client Error: Forbidden for url: https://www.ftc.gov/system/files/ftc_gov/pdf/p042103_0.pdf,2025-10-14T16:45:52.996338+00:00
+,https://www.faa.gov/sites/faa.gov/files/air_traffic/publications/atpubs/pcg/pcg_basic.pdf,failed: 404 Client Error: Not Found for url: https://www.faa.gov/sites/faa.gov/files/air_traffic/publications/atpubs/pcg/pcg_basic.pdf,2025-10-14T16:45:55.152320+00:00
+,https://www.nasa.gov/wp-content/uploads/2015/06/np-2015-03-015-jsc-orion-pg.pdf,failed: 404 Client Error: Not Found for url: https://www.nasa.gov/wp-content/uploads/2015/06/np-2015-03-015-jsc-orion-pg.pdf,2025-10-14T16:45:56.729552+00:00

@@ -22,13 +22,48 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-# Rule-based keywords for tagging
+# Enhanced rule-based keywords for comprehensive domain tagging
 RULE_BASED_KEYWORDS = {
-    'environment': ['environment', 'climate', 'carbon', 'emission', 'sustainability', 'green', 'renewable', 'pollution'],
-    'finance': ['finance', 'financial', 'budget', 'revenue', 'tax', 'investment', 'funding', 'cost', 'expense'],
-    'infrastructure': ['infrastructure', 'construction', 'building', 'transport', 'road', 'bridge', 'facility', 'development'],
-    'health': ['health', 'medical', 'healthcare', 'hospital', 'patient', 'disease', 'treatment', 'medicine'],
-    'technology': ['technology', 'digital', 'software', 'computer', 'data', 'system', 'network', 'cyber', 'AI', 'automation']
+    'finance': [
+        'finance', 'financial', 'budget', 'revenue', 'tax', 'investment', 'funding', 'cost', 'expense',
+        'accounting', 'audit', 'compliance', 'regulatory', 'banking', 'credit', 'loan', 'payment',
+        'profit', 'loss', 'income', 'expenditure', 'fiscal', 'monetary', 'economic', 'treasury'
+    ],
+    'technology': [
+        'technology', 'digital', 'software', 'computer', 'data', 'system', 'network', 'cyber', 'AI', 'automation',
+        'IT', 'information', 'database', 'cloud', 'security', 'encryption', 'algorithm', 'machine learning',
+        'artificial intelligence', 'blockchain', 'API', 'integration', 'platform', 'application'
+    ],
+    'healthcare': [
+        'health', 'medical', 'healthcare', 'hospital', 'patient', 'disease', 'treatment', 'medicine',
+        'clinical', 'diagnosis', 'therapy', 'pharmaceutical', 'drug', 'vaccine', 'surgery', 'nursing',
+        'mental health', 'wellness', 'prevention', 'epidemiology', 'public health', 'medical device'
+    ],
+    'environment': [
+        'environment', 'climate', 'carbon', 'emission', 'sustainability', 'green', 'renewable', 'pollution',
+        'ecosystem', 'biodiversity', 'conservation', 'energy', 'solar', 'wind', 'clean', 'waste',
+        'recycling', 'sustainable', 'environmental impact', 'carbon footprint', 'global warming'
+    ],
+    'infrastructure': [
+        'infrastructure', 'construction', 'building', 'transport', 'road', 'bridge', 'facility', 'development',
+        'urban', 'city', 'municipal', 'public works', 'engineering', 'architecture', 'planning',
+        'housing', 'utilities', 'water', 'sewage', 'electricity', 'telecommunications'
+    ],
+    'legal': [
+        'legal', 'law', 'regulation', 'compliance', 'policy', 'legislation', 'statute', 'court',
+        'judge', 'attorney', 'lawyer', 'contract', 'agreement', 'liability', 'rights', 'obligations',
+        'jurisdiction', 'enforcement', 'penalty', 'sanction', 'governance', 'ethics'
+    ],
+    'education': [
+        'education', 'school', 'university', 'college', 'student', 'teacher', 'learning', 'curriculum',
+        'academic', 'research', 'study', 'training', 'certification', 'degree', 'scholarship',
+        'literacy', 'knowledge', 'skill', 'development', 'pedagogy'
+    ],
+    'government': [
+        'government', 'public', 'administration', 'bureaucracy', 'civil service', 'municipal', 'federal',
+        'state', 'local', 'election', 'democracy', 'citizen', 'public service', 'policy', 'governance',
+        'bureaucracy', 'public sector', 'civil servant', 'official'
+    ]
 }
 
 class AIFilter:
@@ -42,7 +77,7 @@ class AIFilter:
             try:
                 import google.generativeai as genai
                 genai.configure(api_key=gemini_api_key)
-                self.model = genai.GenerativeModel('gemini-pro')
+                self.model = genai.GenerativeModel('gemini-2.5flash')
                 logger.info("✅ Gemini API configured successfully")
             except ImportError:
                 logger.warning("⚠️  google-generativeai not installed. Install with: pip install google-generativeai")
@@ -144,9 +179,12 @@ class AIFilter:
             'processing_method': processing_method
         }
     
-    def split_text_into_chunks(self, text: str, chunk_size: int = 2000) -> List[str]:
-        """Split text into manageable chunks for processing."""
-        # Split by file markers first, then by size
+    def split_text_into_chunks(self, text: str, chunk_size: int = 1200) -> List[str]:
+        """
+        Split text into optimal chunks for AI processing.
+        Target size: 1000-1500 characters for better context retention.
+        """
+        # First, split by file markers to preserve document boundaries
         file_sections = re.split(r'===== (?:BEGIN|END) FILE:', text)
         chunks = []
         
@@ -154,25 +192,78 @@ class AIFilter:
             if not section.strip():
                 continue
             
+            # Clean up the section
+            section = section.strip()
+            
             # If section is small enough, keep as one chunk
             if len(section) <= chunk_size:
-                chunks.append(section.strip())
+                chunks.append(section)
             else:
-                # Split large sections by paragraphs or sentences
-                sentences = re.split(r'[.!?]\s+', section)
-                current_chunk = ""
+                # Split large sections intelligently
+                section_chunks = self._split_section_into_chunks(section, chunk_size)
+                chunks.extend(section_chunks)
+        
+        # Filter out empty chunks and ensure minimum size
+        valid_chunks = []
+        for chunk in chunks:
+            chunk = chunk.strip()
+            if len(chunk) >= 50:  # Minimum meaningful chunk size
+                valid_chunks.append(chunk)
+        
+        logger.info(f"📊 Split text into {len(valid_chunks)} chunks (target: {chunk_size} chars)")
+        return valid_chunks
+    
+    def _split_section_into_chunks(self, section: str, chunk_size: int) -> List[str]:
+        """Split a large section into optimally sized chunks."""
+        chunks = []
+        
+        # Try to split by paragraphs first
+        paragraphs = section.split('\n\n')
+        current_chunk = ""
+        
+        for paragraph in paragraphs:
+            paragraph = paragraph.strip()
+            if not paragraph:
+                continue
+            
+            # If adding this paragraph would exceed chunk size
+            if len(current_chunk) + len(paragraph) > chunk_size and current_chunk:
+                chunks.append(current_chunk.strip())
+                current_chunk = paragraph
+            else:
+                if current_chunk:
+                    current_chunk += "\n\n" + paragraph
+                else:
+                    current_chunk = paragraph
+        
+        # Add the last chunk
+        if current_chunk.strip():
+            chunks.append(current_chunk.strip())
+        
+        # If we still have chunks that are too large, split by sentences
+        final_chunks = []
+        for chunk in chunks:
+            if len(chunk) <= chunk_size:
+                final_chunks.append(chunk)
+            else:
+                # Split by sentences
+                sentences = re.split(r'(?<=[.!?])\s+', chunk)
+                current_sentence_chunk = ""
                 
                 for sentence in sentences:
-                    if len(current_chunk + sentence) > chunk_size and current_chunk:
-                        chunks.append(current_chunk.strip())
-                        current_chunk = sentence
+                    if len(current_sentence_chunk) + len(sentence) > chunk_size and current_sentence_chunk:
+                        final_chunks.append(current_sentence_chunk.strip())
+                        current_sentence_chunk = sentence
                     else:
-                        current_chunk += sentence + ". "
+                        if current_sentence_chunk:
+                            current_sentence_chunk += " " + sentence
+                        else:
+                            current_sentence_chunk = sentence
                 
-                if current_chunk.strip():
-                    chunks.append(current_chunk.strip())
+                if current_sentence_chunk.strip():
+                    final_chunks.append(current_sentence_chunk.strip())
         
-        return [chunk for chunk in chunks if chunk.strip()]
+        return final_chunks
 
 def main():
     """Main execution function with command-line argument support."""

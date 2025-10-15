@@ -1,0 +1,358 @@
+[
+  {
+    "id": 1,
+    "created_at": "2025-10-15T06:03:20.742944+00:00",
+    "summary": "# Merged text generated at 2025-10-14T17:25:51.536805+00:00\n# Each file is separated by a header marker",
+    "tags": [],
+    "detected_years": [
+      20
+    ],
+    "sample_text": "# Merged text generated at 2025-10-14T17:25:51.536805+00:00\n# Each file is separated by a header marker",
+    "processing_method": "rule_based"
+  },
+  {
+    "id": 2,
+    "created_at": "2025-10-15T06:03:20.743312+00:00",
+    "summary": "20251014T160716Z_f1040.pdf =====\nForm1040 2024 U.S. Individual Income Tax Return Department of the Treasury—Internal Revenue Service \nOMB No. 1545-0074 IRS Use Only—Do not write or staple in this space. For the year Jan. 1–Dec. 31, 2024, or other tax year beginning , 2024, ending , 20 See separate instructions. Your first name and middle initial Last name Your social security number \nIf joint return, spouse’s first name and middle initial Last name Spouse’s social security number\nHome address (n...",
+    "tags": [
+      "finance",
+      "technology",
+      "infrastructure",
+      "government"
+    ],
+    "detected_years": [
+      20
+    ],
+    "sample_text": "20251014T160716Z_f1040.pdf =====\nForm1040 2024 U.S. Individual Income Tax Return Department of the Treasury—Internal Revenue Service \nOMB No. 1545-0074 IRS Use Only—Do not write or staple in this space. For the year Jan. 1–Dec. 31, 2024, or other tax year beginning , 2024, ending , 20 See separate instructions. Your first name and middle initial Last name Your social security number \nIf joint return, spouse’s first name and middle initial Last name Spouse’s social security number\nHome address (n",
+    "processing_method": "rule_based"
+  },
+  {
+    "id": 3,
+    "created_at": "2025-10-15T06:03:20.743412+00:00",
+    "summary": "Single \nMarried filing jointly (even if only one had income) \nMarried filing separately (MFS)Head of household (HOH)\nQualifying surviving spouse (QSS)\nIf you checked the MFS box, enter the name of your spouse. If you checked the HOH or QSS box, enter the child’s name if the \nqualifying person is a child but not your dependent:\nIf treating a nonresident alien or dual-status alien spouse as a U.S. resident for the entire tax year, check the box and enter \ntheir name (see instructions and attach st...",
+    "tags": [
+      "finance",
+      "technology",
+      "government"
+    ],
+    "detected_years": [
+      20
+    ],
+    "sample_text": "Single \nMarried filing jointly (even if only one had income) \nMarried filing separately (MFS)Head of household (HOH)\nQualifying surviving spouse (QSS)\nIf you checked the MFS box, enter the name of your spouse. If you checked the HOH or QSS box, enter the child’s name if the \nqualifying person is a child but not your dependent:\nIf treating a nonresident alien or dual-status alien spouse as a U.S. resident for the entire tax year, check the box and enter \ntheir name (see instructions and attach st",
+    "processing_method": "rule_based"
+  },
+  {
+    "id": 4,
+    "created_at": "2025-10-15T06:03:20.743567+00:00",
+    "summary": "(See instructions.) Yes No\nStandard \nDeductionSomeone can claim: You as a dependent Your spouse as a dependent\nSpouse itemizes on a separate return or you were a dual-status alien\nAge/Blindness You: Were born before January 2, 1960 Are blind Spouse: Was born before January 2, 1960 Is blind\nDependents (see instructions):\nIf more \nthan four \ndependents,  \nsee instructions  \nand check \nhere ..(2) Social security \nnumber(3) Relationship \nto you(4) Check the box if qualifies for (see instructions):\n(...",
+    "tags": [
+      "finance",
+      "technology"
+    ],
+    "detected_years": [
+      19
+    ],
+    "sample_text": "(See instructions.) Yes No\nStandard \nDeductionSomeone can claim: You as a dependent Your spouse as a dependent\nSpouse itemizes on a separate return or you were a dual-status alien\nAge/Blindness You: Were born before January 2, 1960 Are blind Spouse: Was born before January 2, 1960 Is blind\nDependents (see instructions):\nIf more \nthan four \ndependents,  \nsee instructions  \nand check \nhere ..(2) Social security \nnumber(3) Relationship \nto you(4) Check the box if qualifies for (see instructions):\n(",
+    "processing_method": "rule_based"
+  },
+  {
+    "id": 5,
+    "created_at": "2025-10-15T06:03:20.743706+00:00",
+    "summary": "1f\ngWages from Form 8919, line 6  ..................... 1g\nhOther earned income (see instructions)  .................. 1h\niNontaxable combat pay election (see instructions)  ....... 1i\nzAdd lines 1a through 1h  ...................... 1z\nAttach Sch. B  \nif required.2a Tax-exempt interest ... 2a b  Taxable interest  ..... 2b \n3a Qualified dividends ... 3a b  Ordinary dividends ..... 3b \n4a IRA distributions .... 4a b  Taxable amount ...... 4b \n5a Pensions and annuities .. 5a b  Taxable amount .......",
+    "tags": [
+      "finance",
+      "technology",
+      "government"
+    ],
+    "detected_years": [],
+    "sample_text": "1f\ngWages from Form 8919, line 6  ..................... 1g\nhOther earned income (see instructions)  .................. 1h\niNontaxable combat pay election (see instructions)  ....... 1i\nzAdd lines 1a through 1h  ...................... 1z\nAttach Sch. B  \nif required.2a Tax-exempt interest ... 2a b  Taxable interest  ..... 2b \n3a Qualified dividends ... 3a b  Ordinary dividends ..... 3b \n4a IRA distributions .... 4a b  Taxable amount ...... 4b \n5a Pensions and annuities .. 5a b  Taxable amount ....",
+    "processing_method": "rule_based"
+  },
+  {
+    "id": 6,
+    "created_at": "2025-10-15T06:03:20.743884+00:00",
+    "summary": "11Standard  \nDeduction for—\n• Single or \nMarried filing \nseparately,  \n$14,600\n• Married filing  \njointly or \nQualifying  \nsurviving spouse,  \n$29,200\n• Head of \nhousehold, \n$21,900\n• If you checked \nany box under \nStandard \nDeduction, \nsee instructions.12 Standard deduction or itemized deductions (from Schedule A) .......... 12\n13 Qualified business income deduction from Form 8995 or Form 8995-A ......... 13\n14 Add lines 12 and 13 ........................ 14\n15 Subtract line 14 from line 11. If...",
+    "tags": [
+      "finance"
+    ],
+    "detected_years": [
+      20
+    ],
+    "sample_text": "11Standard  \nDeduction for—\n• Single or \nMarried filing \nseparately,  \n$14,600\n• Married filing  \njointly or \nQualifying  \nsurviving spouse,  \n$29,200\n• Head of \nhousehold, \n$21,900\n• If you checked \nany box under \nStandard \nDeduction, \nsee instructions.12 Standard deduction or itemized deductions (from Schedule A) .......... 12\n13 Qualified business income deduction from Form 8995 or Form 8995-A ......... 13\n14 Add lines 12 and 13 ........................ 14\n15 Subtract line 14 from line 11. If",
+    "processing_method": "rule_based"
+  },
+  {
+    "id": 7,
+    "created_at": "2025-10-15T06:03:20.744043+00:00",
+    "summary": "22\n23 Other taxes, including self-employment tax, from Schedule 2, line 21 ......... 23\n24 Add lines 22 and 23. This is your total tax ................. 24\nPayments 25 Federal income tax withheld from:\naForm(s) W-2 .................. 25a\nb Form(s) 1099 .................. 25b\ncOther forms (see instructions) ............. 25c\nd Add lines 25a through 25c ...................... 25d\n26 2024 estimated tax payments and amount applied from 2023 return .......... 26If you have a \nqualifying child, \nattac...",
+    "tags": [
+      "finance",
+      "government"
+    ],
+    "detected_years": [
+      20
+    ],
+    "sample_text": "22\n23 Other taxes, including self-employment tax, from Schedule 2, line 21 ......... 23\n24 Add lines 22 and 23. This is your total tax ................. 24\nPayments 25 Federal income tax withheld from:\naForm(s) W-2 .................. 25a\nb Form(s) 1099 .................. 25b\ncOther forms (see instructions) ............. 25c\nd Add lines 25a through 25c ...................... 25d\n26 2024 estimated tax payments and amount applied from 2023 return .......... 26If you have a \nqualifying child, \nattac",
+    "processing_method": "rule_based"
+  },
+  {
+    "id": 8,
+    "created_at": "2025-10-15T06:03:20.744180+00:00",
+    "summary": "See instructions.b Routing number c Type: Checking Savings\nd Account number\n36 Amount of line 34 you want applied to your 2025 estimated tax  ... 36\nAmount  \nYou Owe37 Subtract line 33 from line 24. This is the amount you owe. For details on how to pay, go to www.irs.gov/Payments or see instructions ........ 37\n38 Estimated tax penalty (see instructions) .......... 38\nThird Party \nDesignee Do you want to allow another person to discuss this return with the IRS? See \ninstructions ...................",
+    "tags": [
+      "finance",
+      "technology",
+      "legal",
+      "education",
+      "government"
+    ],
+    "detected_years": [
+      20
+    ],
+    "sample_text": "See instructions.b Routing number c Type: Checking Savings\nd Account number\n36 Amount of line 34 you want applied to your 2025 estimated tax  ... 36\nAmount  \nYou Owe37 Subtract line 33 from line 24. This is the amount you owe. For details on how to pay, go to www.irs.gov/Payments or see instructions ........ 37\n38 Estimated tax penalty (see instructions) .......... 38\nThird Party \nDesignee Do you want to allow another person to discuss this return with the IRS? See \ninstructions ................",
+    "processing_method": "rule_based"
+  },
+  {
+    "id": 9,
+    "created_at": "2025-10-15T06:03:20.744252+00:00",
+    "summary": "Date Spouse’s occupation If the IRS sent your spouse an \nIdentity Protection PIN, enter it here \n(see inst.) \nPhone no. Email address \nPaid  \nPreparer  \nUse Only Preparer’s name Preparer’s signature Date  PTIN Check if:\nSelf-employed\nFirm’s name Phone no. Firm’s address  Firm’s EIN  \nGo to www.irs.gov/Form1040 for instructions and the latest information. Form 1040  (2024)",
+    "tags": [
+      "technology"
+    ],
+    "detected_years": [
+      20
+    ],
+    "sample_text": "Date Spouse’s occupation If the IRS sent your spouse an \nIdentity Protection PIN, enter it here \n(see inst.) \nPhone no. Email address \nPaid  \nPreparer  \nUse Only Preparer’s name Preparer’s signature Date  PTIN Check if:\nSelf-employed\nFirm’s name Phone no. Firm’s address  Firm’s EIN  \nGo to www.irs.gov/Form1040 for instructions and the latest information. Form 1040  (2024)",
+    "processing_method": "rule_based"
+  },
+  {
+    "id": 10,
+    "created_at": "2025-10-15T06:03:20.744372+00:00",
+    "summary": "20251014T162800Z_f1040.pdf =====\nForm1040 2024 U.S. Individual Income Tax Return Department of the Treasury—Internal Revenue Service \nOMB No. 1545-0074 IRS Use Only—Do not write or staple in this space. For the year Jan. 1–Dec. 31, 2024, or other tax year beginning , 2024, ending , 20 See separate instructions. Your first name and middle initial Last name Your social security number \nIf joint return, spouse’s first name and middle initial Last name Spouse’s social security number\nHome address (n...",
+    "tags": [
+      "finance",
+      "technology",
+      "infrastructure",
+      "government"
+    ],
+    "detected_years": [
+      20
+    ],
+    "sample_text": "20251014T162800Z_f1040.pdf =====\nForm1040 2024 U.S. Individual Income Tax Return Department of the Treasury—Internal Revenue Service \nOMB No. 1545-0074 IRS Use Only—Do not write or staple in this space. For the year Jan. 1–Dec. 31, 2024, or other tax year beginning , 2024, ending , 20 See separate instructions. Your first name and middle initial Last name Your social security number \nIf joint return, spouse’s first name and middle initial Last name Spouse’s social security number\nHome address (n",
+    "processing_method": "rule_based"
+  },
+  {
+    "id": 11,
+    "created_at": "2025-10-15T06:03:20.744464+00:00",
+    "summary": "Single \nMarried filing jointly (even if only one had income) \nMarried filing separately (MFS)Head of household (HOH)\nQualifying surviving spouse (QSS)\nIf you checked the MFS box, enter the name of your spouse. If you checked the HOH or QSS box, enter the child’s name if the \nqualifying person is a child but not your dependent:\nIf treating a nonresident alien or dual-status alien spouse as a U.S. resident for the entire tax year, check the box and enter \ntheir name (see instructions and attach st...",
+    "tags": [
+      "finance",
+      "technology",
+      "government"
+    ],
+    "detected_years": [
+      20
+    ],
+    "sample_text": "Single \nMarried filing jointly (even if only one had income) \nMarried filing separately (MFS)Head of household (HOH)\nQualifying surviving spouse (QSS)\nIf you checked the MFS box, enter the name of your spouse. If you checked the HOH or QSS box, enter the child’s name if the \nqualifying person is a child but not your dependent:\nIf treating a nonresident alien or dual-status alien spouse as a U.S. resident for the entire tax year, check the box and enter \ntheir name (see instructions and attach st",
+    "processing_method": "rule_based"
+  },
+  {
+    "id": 12,
+    "created_at": "2025-10-15T06:03:20.744614+00:00",
+    "summary": "(See instructions.) Yes No\nStandard \nDeductionSomeone can claim: You as a dependent Your spouse as a dependent\nSpouse itemizes on a separate return or you were a dual-status alien\nAge/Blindness You: Were born before January 2, 1960 Are blind Spouse: Was born before January 2, 1960 Is blind\nDependents (see instructions):\nIf more \nthan four \ndependents,  \nsee instructions  \nand check \nhere ..(2) Social security \nnumber(3) Relationship \nto you(4) Check the box if qualifies for (see instructions):\n(...",
+    "tags": [
+      "finance",
+      "technology"
+    ],
+    "detected_years": [
+      19
+    ],
+    "sample_text": "(See instructions.) Yes No\nStandard \nDeductionSomeone can claim: You as a dependent Your spouse as a dependent\nSpouse itemizes on a separate return or you were a dual-status alien\nAge/Blindness You: Were born before January 2, 1960 Are blind Spouse: Was born before January 2, 1960 Is blind\nDependents (see instructions):\nIf more \nthan four \ndependents,  \nsee instructions  \nand check \nhere ..(2) Social security \nnumber(3) Relationship \nto you(4) Check the box if qualifies for (see instructions):\n(",
+    "processing_method": "rule_based"
+  },
+  {
+    "id": 13,
+    "created_at": "2025-10-15T06:03:20.744750+00:00",
+    "summary": "1f\ngWages from Form 8919, line 6  ..................... 1g\nhOther earned income (see instructions)  .................. 1h\niNontaxable combat pay election (see instructions)  ....... 1i\nzAdd lines 1a through 1h  ...................... 1z\nAttach Sch. B  \nif required.2a Tax-exempt interest ... 2a b  Taxable interest  ..... 2b \n3a Qualified dividends ... 3a b  Ordinary dividends ..... 3b \n4a IRA distributions .... 4a b  Taxable amount ...... 4b \n5a Pensions and annuities .. 5a b  Taxable amount .......",
+    "tags": [
+      "finance",
+      "technology",
+      "government"
+    ],
+    "detected_years": [],
+    "sample_text": "1f\ngWages from Form 8919, line 6  ..................... 1g\nhOther earned income (see instructions)  .................. 1h\niNontaxable combat pay election (see instructions)  ....... 1i\nzAdd lines 1a through 1h  ...................... 1z\nAttach Sch. B  \nif required.2a Tax-exempt interest ... 2a b  Taxable interest  ..... 2b \n3a Qualified dividends ... 3a b  Ordinary dividends ..... 3b \n4a IRA distributions .... 4a b  Taxable amount ...... 4b \n5a Pensions and annuities .. 5a b  Taxable amount ....",
+    "processing_method": "rule_based"
+  },
+  {
+    "id": 14,
+    "created_at": "2025-10-15T06:03:20.744924+00:00",
+    "summary": "11Standard  \nDeduction for—\n• Single or \nMarried filing \nseparately,  \n$14,600\n• Married filing  \njointly or \nQualifying  \nsurviving spouse,  \n$29,200\n• Head of \nhousehold, \n$21,900\n• If you checked \nany box under \nStandard \nDeduction, \nsee instructions.12 Standard deduction or itemized deductions (from Schedule A) .......... 12\n13 Qualified business income deduction from Form 8995 or Form 8995-A ......... 13\n14 Add lines 12 and 13 ........................ 14\n15 Subtract line 14 from line 11. If...",
+    "tags": [
+      "finance"
+    ],
+    "detected_years": [
+      20
+    ],
+    "sample_text": "11Standard  \nDeduction for—\n• Single or \nMarried filing \nseparately,  \n$14,600\n• Married filing  \njointly or \nQualifying  \nsurviving spouse,  \n$29,200\n• Head of \nhousehold, \n$21,900\n• If you checked \nany box under \nStandard \nDeduction, \nsee instructions.12 Standard deduction or itemized deductions (from Schedule A) .......... 12\n13 Qualified business income deduction from Form 8995 or Form 8995-A ......... 13\n14 Add lines 12 and 13 ........................ 14\n15 Subtract line 14 from line 11. If",
+    "processing_method": "rule_based"
+  },
+  {
+    "id": 15,
+    "created_at": "2025-10-15T06:03:20.745082+00:00",
+    "summary": "22\n23 Other taxes, including self-employment tax, from Schedule 2, line 21 ......... 23\n24 Add lines 22 and 23. This is your total tax ................. 24\nPayments 25 Federal income tax withheld from:\naForm(s) W-2 .................. 25a\nb Form(s) 1099 .................. 25b\ncOther forms (see instructions) ............. 25c\nd Add lines 25a through 25c ...................... 25d\n26 2024 estimated tax payments and amount applied from 2023 return .......... 26If you have a \nqualifying child, \nattac...",
+    "tags": [
+      "finance",
+      "government"
+    ],
+    "detected_years": [
+      20
+    ],
+    "sample_text": "22\n23 Other taxes, including self-employment tax, from Schedule 2, line 21 ......... 23\n24 Add lines 22 and 23. This is your total tax ................. 24\nPayments 25 Federal income tax withheld from:\naForm(s) W-2 .................. 25a\nb Form(s) 1099 .................. 25b\ncOther forms (see instructions) ............. 25c\nd Add lines 25a through 25c ...................... 25d\n26 2024 estimated tax payments and amount applied from 2023 return .......... 26If you have a \nqualifying child, \nattac",
+    "processing_method": "rule_based"
+  },
+  {
+    "id": 16,
+    "created_at": "2025-10-15T06:03:20.745222+00:00",
+    "summary": "See instructions.b Routing number c Type: Checking Savings\nd Account number\n36 Amount of line 34 you want applied to your 2025 estimated tax  ... 36\nAmount  \nYou Owe37 Subtract line 33 from line 24. This is the amount you owe. For details on how to pay, go to www.irs.gov/Payments or see instructions ........ 37\n38 Estimated tax penalty (see instructions) .......... 38\nThird Party \nDesignee Do you want to allow another person to discuss this return with the IRS? See \ninstructions ...................",
+    "tags": [
+      "finance",
+      "technology",
+      "legal",
+      "education",
+      "government"
+    ],
+    "detected_years": [
+      20
+    ],
+    "sample_text": "See instructions.b Routing number c Type: Checking Savings\nd Account number\n36 Amount of line 34 you want applied to your 2025 estimated tax  ... 36\nAmount  \nYou Owe37 Subtract line 33 from line 24. This is the amount you owe. For details on how to pay, go to www.irs.gov/Payments or see instructions ........ 37\n38 Estimated tax penalty (see instructions) .......... 38\nThird Party \nDesignee Do you want to allow another person to discuss this return with the IRS? See \ninstructions ................",
+    "processing_method": "rule_based"
+  },
+  {
+    "id": 17,
+    "created_at": "2025-10-15T06:03:20.745293+00:00",
+    "summary": "Date Spouse’s occupation If the IRS sent your spouse an \nIdentity Protection PIN, enter it here \n(see inst.) \nPhone no. Email address \nPaid  \nPreparer  \nUse Only Preparer’s name Preparer’s signature Date  PTIN Check if:\nSelf-employed\nFirm’s name Phone no. Firm’s address  Firm’s EIN  \nGo to www.irs.gov/Form1040 for instructions and the latest information. Form 1040  (2024)",
+    "tags": [
+      "technology"
+    ],
+    "detected_years": [
+      20
+    ],
+    "sample_text": "Date Spouse’s occupation If the IRS sent your spouse an \nIdentity Protection PIN, enter it here \n(see inst.) \nPhone no. Email address \nPaid  \nPreparer  \nUse Only Preparer’s name Preparer’s signature Date  PTIN Check if:\nSelf-employed\nFirm’s name Phone no. Firm’s address  Firm’s EIN  \nGo to www.irs.gov/Form1040 for instructions and the latest information. Form 1040  (2024)",
+    "processing_method": "rule_based"
+  },
+  {
+    "id": 18,
+    "created_at": "2025-10-15T06:03:20.745411+00:00",
+    "summary": "20251014T164549Z_f1040.pdf =====\nForm1040 2024 U.S. Individual Income Tax Return Department of the Treasury—Internal Revenue Service \nOMB No. 1545-0074 IRS Use Only—Do not write or staple in this space. For the year Jan. 1–Dec. 31, 2024, or other tax year beginning , 2024, ending , 20 See separate instructions. Your first name and middle initial Last name Your social security number \nIf joint return, spouse’s first name and middle initial Last name Spouse’s social security number\nHome address (n...",
+    "tags": [
+      "finance",
+      "technology",
+      "infrastructure",
+      "government"
+    ],
+    "detected_years": [
+      20
+    ],
+    "sample_text": "20251014T164549Z_f1040.pdf =====\nForm1040 2024 U.S. Individual Income Tax Return Department of the Treasury—Internal Revenue Service \nOMB No. 1545-0074 IRS Use Only—Do not write or staple in this space. For the year Jan. 1–Dec. 31, 2024, or other tax year beginning , 2024, ending , 20 See separate instructions. Your first name and middle initial Last name Your social security number \nIf joint return, spouse’s first name and middle initial Last name Spouse’s social security number\nHome address (n",
+    "processing_method": "rule_based"
+  },
+  {
+    "id": 19,
+    "created_at": "2025-10-15T06:03:20.745503+00:00",
+    "summary": "Single \nMarried filing jointly (even if only one had income) \nMarried filing separately (MFS)Head of household (HOH)\nQualifying surviving spouse (QSS)\nIf you checked the MFS box, enter the name of your spouse. If you checked the HOH or QSS box, enter the child’s name if the \nqualifying person is a child but not your dependent:\nIf treating a nonresident alien or dual-status alien spouse as a U.S. resident for the entire tax year, check the box and enter \ntheir name (see instructions and attach st...",
+    "tags": [
+      "finance",
+      "technology",
+      "government"
+    ],
+    "detected_years": [
+      20
+    ],
+    "sample_text": "Single \nMarried filing jointly (even if only one had income) \nMarried filing separately (MFS)Head of household (HOH)\nQualifying surviving spouse (QSS)\nIf you checked the MFS box, enter the name of your spouse. If you checked the HOH or QSS box, enter the child’s name if the \nqualifying person is a child but not your dependent:\nIf treating a nonresident alien or dual-status alien spouse as a U.S. resident for the entire tax year, check the box and enter \ntheir name (see instructions and attach st",
+    "processing_method": "rule_based"
+  },
+  {
+    "id": 20,
+    "created_at": "2025-10-15T06:03:20.745652+00:00",
+    "summary": "(See instructions.) Yes No\nStandard \nDeductionSomeone can claim: You as a dependent Your spouse as a dependent\nSpouse itemizes on a separate return or you were a dual-status alien\nAge/Blindness You: Were born before January 2, 1960 Are blind Spouse: Was born before January 2, 1960 Is blind\nDependents (see instructions):\nIf more \nthan four \ndependents,  \nsee instructions  \nand check \nhere ..(2) Social security \nnumber(3) Relationship \nto you(4) Check the box if qualifies for (see instructions):\n(...",
+    "tags": [
+      "finance",
+      "technology"
+    ],
+    "detected_years": [
+      19
+    ],
+    "sample_text": "(See instructions.) Yes No\nStandard \nDeductionSomeone can claim: You as a dependent Your spouse as a dependent\nSpouse itemizes on a separate return or you were a dual-status alien\nAge/Blindness You: Were born before January 2, 1960 Are blind Spouse: Was born before January 2, 1960 Is blind\nDependents (see instructions):\nIf more \nthan four \ndependents,  \nsee instructions  \nand check \nhere ..(2) Social security \nnumber(3) Relationship \nto you(4) Check the box if qualifies for (see instructions):\n(",
+    "processing_method": "rule_based"
+  },
+  {
+    "id": 21,
+    "created_at": "2025-10-15T06:03:20.745791+00:00",
+    "summary": "1f\ngWages from Form 8919, line 6  ..................... 1g\nhOther earned income (see instructions)  .................. 1h\niNontaxable combat pay election (see instructions)  ....... 1i\nzAdd lines 1a through 1h  ...................... 1z\nAttach Sch. B  \nif required.2a Tax-exempt interest ... 2a b  Taxable interest  ..... 2b \n3a Qualified dividends ... 3a b  Ordinary dividends ..... 3b \n4a IRA distributions .... 4a b  Taxable amount ...... 4b \n5a Pensions and annuities .. 5a b  Taxable amount .......",
+    "tags": [
+      "finance",
+      "technology",
+      "government"
+    ],
+    "detected_years": [],
+    "sample_text": "1f\ngWages from Form 8919, line 6  ..................... 1g\nhOther earned income (see instructions)  .................. 1h\niNontaxable combat pay election (see instructions)  ....... 1i\nzAdd lines 1a through 1h  ...................... 1z\nAttach Sch. B  \nif required.2a Tax-exempt interest ... 2a b  Taxable interest  ..... 2b \n3a Qualified dividends ... 3a b  Ordinary dividends ..... 3b \n4a IRA distributions .... 4a b  Taxable amount ...... 4b \n5a Pensions and annuities .. 5a b  Taxable amount ....",
+    "processing_method": "rule_based"
+  },
+  {
+    "id": 22,
+    "created_at": "2025-10-15T06:03:20.745968+00:00",
+    "summary": "11Standard  \nDeduction for—\n• Single or \nMarried filing \nseparately,  \n$14,600\n• Married filing  \njointly or \nQualifying  \nsurviving spouse,  \n$29,200\n• Head of \nhousehold, \n$21,900\n• If you checked \nany box under \nStandard \nDeduction, \nsee instructions.12 Standard deduction or itemized deductions (from Schedule A) .......... 12\n13 Qualified business income deduction from Form 8995 or Form 8995-A ......... 13\n14 Add lines 12 and 13 ........................ 14\n15 Subtract line 14 from line 11. If...",
+    "tags": [
+      "finance"
+    ],
+    "detected_years": [
+      20
+    ],
+    "sample_text": "11Standard  \nDeduction for—\n• Single or \nMarried filing \nseparately,  \n$14,600\n• Married filing  \njointly or \nQualifying  \nsurviving spouse,  \n$29,200\n• Head of \nhousehold, \n$21,900\n• If you checked \nany box under \nStandard \nDeduction, \nsee instructions.12 Standard deduction or itemized deductions (from Schedule A) .......... 12\n13 Qualified business income deduction from Form 8995 or Form 8995-A ......... 13\n14 Add lines 12 and 13 ........................ 14\n15 Subtract line 14 from line 11. If",
+    "processing_method": "rule_based"
+  },
+  {
+    "id": 23,
+    "created_at": "2025-10-15T06:03:20.746125+00:00",
+    "summary": "22\n23 Other taxes, including self-employment tax, from Schedule 2, line 21 ......... 23\n24 Add lines 22 and 23. This is your total tax ................. 24\nPayments 25 Federal income tax withheld from:\naForm(s) W-2 .................. 25a\nb Form(s) 1099 .................. 25b\ncOther forms (see instructions) ............. 25c\nd Add lines 25a through 25c ...................... 25d\n26 2024 estimated tax payments and amount applied from 2023 return .......... 26If you have a \nqualifying child, \nattac...",
+    "tags": [
+      "finance",
+      "government"
+    ],
+    "detected_years": [
+      20
+    ],
+    "sample_text": "22\n23 Other taxes, including self-employment tax, from Schedule 2, line 21 ......... 23\n24 Add lines 22 and 23. This is your total tax ................. 24\nPayments 25 Federal income tax withheld from:\naForm(s) W-2 .................. 25a\nb Form(s) 1099 .................. 25b\ncOther forms (see instructions) ............. 25c\nd Add lines 25a through 25c ...................... 25d\n26 2024 estimated tax payments and amount applied from 2023 return .......... 26If you have a \nqualifying child, \nattac",
+    "processing_method": "rule_based"
+  },
+  {
+    "id": 24,
+    "created_at": "2025-10-15T06:03:20.746262+00:00",
+    "summary": "See instructions.b Routing number c Type: Checking Savings\nd Account number\n36 Amount of line 34 you want applied to your 2025 estimated tax  ... 36\nAmount  \nYou Owe37 Subtract line 33 from line 24. This is the amount you owe. For details on how to pay, go to www.irs.gov/Payments or see instructions ........ 37\n38 Estimated tax penalty (see instructions) .......... 38\nThird Party \nDesignee Do you want to allow another person to discuss this return with the IRS? See \ninstructions ...................",
+    "tags": [
+      "finance",
+      "technology",
+      "legal",
+      "education",
+      "government"
+    ],
+    "detected_years": [
+      20
+    ],
+    "sample_text": "See instructions.b Routing number c Type: Checking Savings\nd Account number\n36 Amount of line 34 you want applied to your 2025 estimated tax  ... 36\nAmount  \nYou Owe37 Subtract line 33 from line 24. This is the amount you owe. For details on how to pay, go to www.irs.gov/Payments or see instructions ........ 37\n38 Estimated tax penalty (see instructions) .......... 38\nThird Party \nDesignee Do you want to allow another person to discuss this return with the IRS? See \ninstructions ................",
+    "processing_method": "rule_based"
+  },
+  {
+    "id": 25,
+    "created_at": "2025-10-15T06:03:20.746334+00:00",
+    "summary": "Date Spouse’s occupation If the IRS sent your spouse an \nIdentity Protection PIN, enter it here \n(see inst.) \nPhone no. Email address \nPaid  \nPreparer  \nUse Only Preparer’s name Preparer’s signature Date  PTIN Check if:\nSelf-employed\nFirm’s name Phone no. Firm’s address  Firm’s EIN  \nGo to www.irs.gov/Form1040 for instructions and the latest information. Form 1040  (2024)",
+    "tags": [
+      "technology"
+    ],
+    "detected_years": [
+      20
+    ],
+    "sample_text": "Date Spouse’s occupation If the IRS sent your spouse an \nIdentity Protection PIN, enter it here \n(see inst.) \nPhone no. Email address \nPaid  \nPreparer  \nUse Only Preparer’s name Preparer’s signature Date  PTIN Check if:\nSelf-employed\nFirm’s name Phone no. Firm’s address  Firm’s EIN  \nGo to www.irs.gov/Form1040 for instructions and the latest information. Form 1040  (2024)",
+    "processing_method": "rule_based"
+  }
+]
