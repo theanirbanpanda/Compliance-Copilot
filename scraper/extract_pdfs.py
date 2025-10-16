@@ -6,77 +6,65 @@ from datetime import datetime, timezone
 
 from PyPDF2 import PdfReader
 
-# Configure logging with timestamps
+# Configure logging
 logger = logging.getLogger("scraper.extract_pdfs")
-logger.setLevel(logging.DEBUG)
+logger.setLevel(logging.INFO)
 _console = logging.StreamHandler(sys.stdout)
-_console.setLevel(logging.INFO)
 _formatter = logging.Formatter(fmt="%(asctime)s | %(levelname)s | %(message)s", datefmt="%Y-%m-%d %H:%M:%S")
 _console.setFormatter(_formatter)
 if not logger.handlers:
     logger.addHandler(_console)
 
-PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__)))
 DOWNLOADS_DIR = os.path.join(PROJECT_ROOT, "downloads")
 MERGED_OUTPUT = os.path.join(DOWNLOADS_DIR, "merged_output.txt")
 
 def extract_text_from_pdf(pdf_path: str) -> Tuple[bool, str]:
-    """
-    Returns: (success, extracted_text_or_error_message)
-    """
+    """Extracts text from a single PDF file, handling errors gracefully."""
     try:
         reader = PdfReader(pdf_path)
-        texts = []
-        for idx, page in enumerate(reader.pages):
-            try:
-                txt = page.extract_text() or ""
-            except Exception as e_page:
-                txt = f"[[ERROR extracting page {idx}: {e_page}]]\n"
-            texts.append(txt)
+        texts = [page.extract_text() or "" for page in reader.pages]
         return True, "\n".join(texts)
     except Exception as e:
+        logger.error(f"Failed to read PDF {os.path.basename(pdf_path)}: {e}")
         return False, f"Failed to read PDF: {e}"
 
 def run() -> None:
+    print("🚀 PDF Text Extraction Pipeline")
+    print("=" * 50)
+
     os.makedirs(DOWNLOADS_DIR, exist_ok=True)
-    pdf_files = [f for f in os.listdir(DOWNLOADS_DIR) if f.lower().endswith(".pdf")]
-    pdf_files.sort()
+    pdf_files = sorted([f for f in os.listdir(DOWNLOADS_DIR) if f.lower().endswith(".pdf")])
+    
     total = len(pdf_files)
-    success = 0
-    failed = 0
+    success_count = 0
     total_chars = 0
 
-    logger.info(f"Downloads directory: {DOWNLOADS_DIR}")
-    logger.info(f"Found {total} PDF file(s) to process")
+    logger.info(f"Found {total} PDF file(s) in '{DOWNLOADS_DIR}'")
 
+    # The 'w' mode ensures the file is always overwritten for a fresh run
     with open(MERGED_OUTPUT, "w", encoding="utf-8") as out:
         header = f"# Merged text generated at {datetime.now(timezone.utc).isoformat()}\n"
         out.write(header)
-        out.write("# Each file is separated by a header marker\n\n")
 
         for name in pdf_files:
             pdf_path = os.path.join(DOWNLOADS_DIR, name)
-            logger.info(f"Processing: {pdf_path}")
             ok, payload = extract_text_from_pdf(pdf_path)
             if ok:
-                success += 1
-                out.write(f"\n\n===== BEGIN FILE: {name} =====\n")
+                success_count += 1
+                out.write(f"\n===== BEGIN FILE: {name} =====\n")
                 out.write(payload)
                 out.write(f"\n===== END FILE: {name} =====\n")
                 total_chars += len(payload)
             else:
-                failed += 1
-                logger.error(f"Extraction failed for {name}: {payload}")
-                out.write(f"\n\n===== BEGIN FILE: {name} (EXTRACTION FAILED) =====\n")
-                out.write(payload)
-                out.write(f"\n===== END FILE: {name} (EXTRACTION FAILED) =====\n")
+                logger.warning(f"Skipping failed extraction for {name}")
 
-    # Print required summary
-    print(f"Total PDF files processed: {total}")
-    print(f"Successfully extracted: {success}")
-    print(f"Failed extractions: {failed}")
-    print(f"Total characters extracted: {total_chars}")
-    print(f"Merged output saved to: {MERGED_OUTPUT}")
+    print("\n📊 Extraction Summary:")
+    print(f"   Total PDF files found: {total}")
+    print(f"   Successfully extracted: {success_count}")
+    print(f"   Failed extractions: {total - success_count}")
+    print(f"   Merged output: {MERGED_OUTPUT}")
+    print(f"   Total characters: {total_chars}")
 
 if __name__ == "__main__":
     run()

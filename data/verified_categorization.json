@@ -7,7 +7,11 @@
       "technology"
     ],
     "confidence": "high",
-    "text_sample": "# Merged PDF text generated at 2025-10-16T13:44:53.373652+00:00\n# Each file is separated by a header marker..."
+    "text_sample": "# Merged PDF text generated at 2025-10-16T13:44:53.373652+00:00\n# Each file is separated by a header marker...",
+    "verification": {
+      "status": "passed",
+      "notes": "All tags appear consistent with text sample."
+    }
   },
   {
     "chunk_id": 2,
@@ -20,7 +24,13 @@
       "technology"
     ],
     "confidence": 5,
-    "text_sample": "Form1040 2024 U.S. Individual Income Tax Return Department of the Treasury—Internal Revenue Service \nOMB No. 1545-0074 IRS Use Only—Do not write or staple in this space. \nFor the year Jan. 1–Dec. 31, 2024, or other tax year beginning , 2024, ending , 20 See separate instructions.\nYour first name and..."
+    "text_sample": "Form1040 2024 U.S. Individual Income Tax Return Department of the Treasury—Internal Revenue Service \nOMB No. 1545-0074 IRS Use Only—Do not write or staple in this space. \nFor the year Jan. 1–Dec. 31, 2024, or other tax year beginning , 2024, ending , 20 See separate instructions.\nYour first name and...",
+    "verification": {
+      "status": "failed",
+      "notes": [
+        "Tag 'legal' is present, but no required keywords (contract, agreement, policy, regulation, law) were found in the text sample."
+      ]
+    }
   },
   {
     "chunk_id": 3,
@@ -33,7 +43,13 @@
       "technology"
     ],
     "confidence": 1.0,
-    "text_sample": "Form1040 2024 U.S. Individual Income Tax Return Department of the Treasury—Internal Revenue Service \nOMB No. 1545-0074 IRS Use Only—Do not write or staple in this space. \nFor the year Jan. 1–Dec. 31, 2024, or other tax year beginning , 2024, ending , 20 See separate instructions.\nYour first name and..."
+    "text_sample": "Form1040 2024 U.S. Individual Income Tax Return Department of the Treasury—Internal Revenue Service \nOMB No. 1545-0074 IRS Use Only—Do not write or staple in this space. \nFor the year Jan. 1–Dec. 31, 2024, or other tax year beginning , 2024, ending , 20 See separate instructions.\nYour first name and...",
+    "verification": {
+      "status": "failed",
+      "notes": [
+        "Tag 'legal' is present, but no required keywords (contract, agreement, policy, regulation, law) were found in the text sample."
+      ]
+    }
   },
   {
     "chunk_id": 4,
@@ -46,7 +62,13 @@
       "technology"
     ],
     "confidence": "high",
-    "text_sample": "Form1040 2024 U.S. Individual Income Tax Return Department of the Treasury—Internal Revenue Service \nOMB No. 1545-0074 IRS Use Only—Do not write or staple in this space. \nFor the year Jan. 1–Dec. 31, 2024, or other tax year beginning , 2024, ending , 20 See separate instructions.\nYour first name and..."
+    "text_sample": "Form1040 2024 U.S. Individual Income Tax Return Department of the Treasury—Internal Revenue Service \nOMB No. 1545-0074 IRS Use Only—Do not write or staple in this space. \nFor the year Jan. 1–Dec. 31, 2024, or other tax year beginning , 2024, ending , 20 See separate instructions.\nYour first name and...",
+    "verification": {
+      "status": "failed",
+      "notes": [
+        "Tag 'legal' is present, but no required keywords (contract, agreement, policy, regulation, law) were found in the text sample."
+      ]
+    }
   },
   {
     "chunk_id": 5,
@@ -58,7 +80,13 @@
       "technology"
     ],
     "confidence": 0.98,
-    "text_sample": "Employment Eligibility Verification \nDepartment of Homeland Security \nU.S. Citizenship and Immigration Services USCIS \nForm I-9\nOMB No.1615-0047 \nExpires 05/31/2027  \nSTART HE RE: Employers must ensure the form instructions are available to employees when completing this form. Employers are liable f..."
+    "text_sample": "Employment Eligibility Verification \nDepartment of Homeland Security \nU.S. Citizenship and Immigration Services USCIS \nForm I-9\nOMB No.1615-0047 \nExpires 05/31/2027  \nSTART HE RE: Employers must ensure the form instructions are available to employees when completing this form. Employers are liable f...",
+    "verification": {
+      "status": "failed",
+      "notes": [
+        "Tag 'legal' is present, but no required keywords (contract, agreement, policy, regulation, law) were found in the text sample."
+      ]
+    }
   },
   {
     "chunk_id": 6,
@@ -71,7 +99,14 @@
       "technology"
     ],
     "confidence": 0.98,
-    "text_sample": "Userid: CPM Schema: tipx Leadpct: 100% Pt. size: 10  Draft  Ok to Print\nAH XSL/XML Fileid: … ication-15/2025/a/xml/cycle05/source (Init. & Date) _______\nPage 1 of 58  11:23 - 17-Dec-2024\nThe type and rule above prints on all proofs including departmental reproduction proofs. MUST be removed before p..."
+    "text_sample": "Userid: CPM Schema: tipx Leadpct: 100% Pt. size: 10  Draft  Ok to Print\nAH XSL/XML Fileid: … ication-15/2025/a/xml/cycle05/source (Init. & Date) _______\nPage 1 of 58  11:23 - 17-Dec-2024\nThe type and rule above prints on all proofs including departmental reproduction proofs. MUST be removed before p...",
+    "verification": {
+      "status": "failed",
+      "notes": [
+        "Tag 'finance' is present, but no required keywords (tax, invoice, payment, financial, budget, revenue) were found in the text sample.",
+        "Tag 'legal' is present, but no required keywords (contract, agreement, policy, regulation, law) were found in the text sample."
+      ]
+    }
   },
   {
     "chunk_id": 7,
@@ -84,6 +119,12 @@
       "technology"
     ],
     "confidence": 1.0,
-    "text_sample": "Form1040 2024 U.S. Individual Income Tax Return Department of the Treasury—Internal Revenue Service \nOMB No. 1545-0074 IRS Use Only—Do not write or staple in this space. \nFor the year Jan. 1–Dec. 31, 2024, or other tax year beginning , 2024, ending , 20 See separate instructions.\nYour first name and..."
+    "text_sample": "Form1040 2024 U.S. Individual Income Tax Return Department of the Treasury—Internal Revenue Service \nOMB No. 1545-0074 IRS Use Only—Do not write or staple in this space. \nFor the year Jan. 1–Dec. 31, 2024, or other tax year beginning , 2024, ending , 20 See separate instructions.\nYour first name and...",
+    "verification": {
+      "status": "failed",
+      "notes": [
+        "Tag 'legal' is present, but no required keywords (contract, agreement, policy, regulation, law) were found in the text sample."
+      ]
+    }
   }
 ]

@@ -18,3 +18,5 @@ reportlab>=3.6.0
 
 # Standard library dependencies (included with Python 3.9+)
 # json, logging, pathlib, datetime, re, argparse, collections
+# For loading environment variables from .env file
+python-dotenv>=0.21.0

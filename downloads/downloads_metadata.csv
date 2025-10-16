@@ -1,7 +1,6 @@
-filename,url,status,timestamp_utc
-,https://www.sec.gov/files/form10-k.pdf,failed: 403 Client Error: Forbidden for url: https://www.sec.gov/files/form10-k.pdf,2025-10-14T16:45:48.342251+00:00
-20251014T164549Z_f1040.pdf,https://www.irs.gov/pub/irs-pdf/f1040.pdf,success,2025-10-14T16:45:50.647877+00:00
-,https://www.cisa.gov/sites/default/files/publications/cisa-insights-ransomware-outbreak.pdf,failed: 404 Client Error: Not Found for url: https://www.cisa.gov/sites/default/files/publications/cisa-insights-ransomware-outbreak.pdf,2025-10-14T16:45:51.482899+00:00
-,https://www.ftc.gov/system/files/ftc_gov/pdf/p042103_0.pdf,failed: 403 Client Error: Forbidden for url: https://www.ftc.gov/system/files/ftc_gov/pdf/p042103_0.pdf,2025-10-14T16:45:52.996338+00:00
-,https://www.faa.gov/sites/faa.gov/files/air_traffic/publications/atpubs/pcg/pcg_basic.pdf,failed: 404 Client Error: Not Found for url: https://www.faa.gov/sites/faa.gov/files/air_traffic/publications/atpubs/pcg/pcg_basic.pdf,2025-10-14T16:45:55.152320+00:00
-,https://www.nasa.gov/wp-content/uploads/2015/06/np-2015-03-015-jsc-orion-pg.pdf,failed: 404 Client Error: Not Found for url: https://www.nasa.gov/wp-content/uploads/2015/06/np-2015-03-015-jsc-orion-pg.pdf,2025-10-14T16:45:56.729552+00:00
+filename,url,status,timestamp_utc,error
+,https://www.osha.gov/sites/default/files/publications/osha3181.pdf,failed,2025-10-16T13:39:25.377552+00:00,403 Client Error: Forbidden for url: https://www.osha.gov/sites/default/files/publications/osha3181.pdf
+20251016T133926Z_whdfs22.pdf,https://www.dol.gov/sites/dolgov/files/WHD/legacy/files/whdfs22.pdf,success,2025-10-16T13:39:26.022725+00:00,
+20251016T133925Z_i-9.pdf,https://www.uscis.gov/sites/default/files/document/forms/i-9.pdf,success,2025-10-16T13:39:26.172887+00:00,
+,https://www.ftc.gov/system/files/documents/plain-language/bus01-complying-with-the-made-in-usa-standard.pdf,failed,2025-10-16T13:39:27.869666+00:00,404 Client Error: Not Found for url: https://www.ftc.gov/system/files/documents/plain-language/bus01-complying-with-the-made-in-usa-standard.pdf
+20251016T133926Z_p15.pdf,https://www.irs.gov/pub/irs-pdf/p15.pdf,success,2025-10-16T13:39:28.606066+00:00,
