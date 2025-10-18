@@ -1,15 +1,15 @@
-# This is the single source of truth for your build settings.
-# It will override the settings in the Netlify UI.
+# This file is the single source of truth for your build.
+# It will override all settings in the Netlify UI.
 
 [build]
-  # 1. Base directory: Where to run install commands.
+  # 1. Base directory: Where to run install commands (inside your 'frontend' folder).
   base = "frontend"
   
   # 2. Build command: The command to build your SvelteKit site.
   command = "npm run build"
   
-  # 3. Publish directory: Where the finished site is located after build.
-  publish = "frontend/build"
+  # 3. Publish directory: Where the finished site is, relative to the 'base' directory.
+  publish = "build"
   
   # 4. Functions directory: Where your Python backend functions are.
   functions = "netlify/functions"
