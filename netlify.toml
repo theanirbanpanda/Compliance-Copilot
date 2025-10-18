@@ -1,8 +1,19 @@
+# This is the single source of truth for your build settings.
+# It will override the settings in the Netlify UI.
+
 [build]
-  command = "npm run build --prefix frontend"
+  # 1. Base directory: Where to run install commands.
+  base = "frontend"
+  
+  # 2. Build command: The command to build your SvelteKit site.
+  command = "npm run build"
+  
+  # 3. Publish directory: Where the finished site is located after build.
   publish = "frontend/build"
+  
+  # 4. Functions directory: Where your Python backend functions are.
   functions = "netlify/functions"
 
-# This is the correct way to set a timeout for ALL functions
+# This sets the timeout for all functions.
 [functions."*"]
   timeout = 120
