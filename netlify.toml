@@ -1,0 +1,8 @@
+[build]
+  command = "npm run build --prefix frontend"
+  publish = "frontend/build"
+  functions = "netlify/functions"
+
+# This is the correct way to set a timeout for ALL functions
+[functions."*"]
+  timeout = 120
