@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Complete Compliance Copilot Pipeline Runner
-Executes the entire backend pipeline: PDF extraction -> AI processing & verification
+Executes the simplified backend pipeline: PDF extraction -> AI processing & verification
 """
 
 import os
@@ -24,7 +24,6 @@ def run_command(command: str, description: str) -> bool:
     logger.info(f"   Command: {command}")
     
     try:
-        # Using shell=True for simplicity, but ensure commands are safe
         result = subprocess.run(command, shell=True, capture_output=True, text=True, check=True)
         logger.info(f"✅ {description} - SUCCESS")
         if result.stdout:
@@ -38,9 +37,6 @@ def run_command(command: str, description: str) -> bool:
         if e.stdout:
             logger.error(f"   Output (stdout): {e.stdout.strip()}")
         return False
-    except Exception as e:
-        logger.error(f"❌ {description} - EXCEPTION: {e}")
-        return False
 
 def main():
     """Run the complete, simplified pipeline."""
@@ -53,10 +49,7 @@ def main():
     
     # --- STEP 1: PDF Text Extraction ---
     logger.info("\n" + "="*60 + "\nSTEP 1: PDF Text Extraction\n" + "="*60)
-    if not run_command(
-        f"python extract_pdfs.py",
-        "Extracting text from all PDFs in downloads/"
-    ):
+    if not run_command(f"python extract_pdfs.py", "Extracting text from all PDFs"):
         logger.error("❌ PDF extraction failed. Stopping pipeline.")
         return
     
@@ -69,10 +62,8 @@ def main():
         logger.error("❌ AI processing failed. Stopping pipeline.")
         return
         
-    # --- FINAL SUMMARY ---
     logger.info("\n" + "="*60 + "\n🎉 PIPELINE COMPLETED SUCCESSFULLY!\n" + "="*60)
     logger.info(f"✅ Final, verified data is available at: {final_output_file}")
-    logger.info("\n📋 Next step: Build the frontend web application.")
     
 if __name__ == "__main__":
     main()
