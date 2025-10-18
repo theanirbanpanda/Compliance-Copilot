@@ -1,12 +1,12 @@
 import type { PageServerLoad } from './$types';
-/// <reference types="node" />
 import { readFile } from 'fs/promises';
 import path from 'path';
 import type { CategorizedItem } from '$lib/types';
 
 export const load: PageServerLoad = async () => {
-  // Go up one level from the 'frontend' folder to find the 'data' folder
-  const dataPath = path.resolve(process.cwd(), '../data/verified_categorization.json');
+  // The 'static' folder is at the root of the project structure for server-side code.
+  // This path correctly finds the file inside 'frontend/static'.
+  const dataPath = path.resolve('frontend/static/verified_categorization.json');
   
   try {
     const fileContents = await readFile(dataPath, 'utf-8');
