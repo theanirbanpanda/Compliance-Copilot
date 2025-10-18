@@ -1,10 +1,21 @@
 # This is the single source of truth for your build.
 
 [build]
+  # 1. Base directory: Where Netlify runs install & build commands.
   base = "frontend"
-  command = "npm run build"
+  
+  # 2. Build command: This is the critical fix.
+  #    - It first copies your final data file from the root into the 'static' folder.
+  #    - It then runs the standard build command.
+  command = "cp ../data/verified_categorization.json static/ && npm run build"
+  
+  # 3. Publish directory: Where the finished site is.
   publish = "build"
-  functions = "netlify/functions"
 
+# All Python functions will live in the root netlify/functions directory.
+[functions]
+  directory = "netlify/functions"
+
+# This sets the timeout for all functions.
 [functions."*"]
   timeout = 120

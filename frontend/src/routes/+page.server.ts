@@ -1,12 +1,12 @@
 import type { PageServerLoad } from './$types';
 import { readFile } from 'fs/promises';
+import path from 'path';
 import type { CategorizedItem } from '$lib/types';
 
 export const load: PageServerLoad = async () => {
-  // --- THIS IS THE DEFINITIVE FIX ---
-  // This path correctly reads the file from the 'static' directory
-  // from within the SvelteKit server environment.
-  const dataPath = './static/verified_categorization.json';
+  // This path correctly reads the file from the 'static' directory,
+  // which is where our build command guarantees it will be.
+  const dataPath = path.resolve('static/verified_categorization.json');
   
   try {
     const fileContents = await readFile(dataPath, 'utf-8');
@@ -15,6 +15,8 @@ export const load: PageServerLoad = async () => {
     // Safety check for data
     const normalized = items.map((it) => ({
       ...it,
+      // The line_number is now read directly, without any confusing fallbacks.
+      line_number: it.line_number, 
       tags: Array.isArray(it.tags) ? it.tags : [],
       verification: it.verification ?? { status: 'failed', notes: 'Missing verification data.' }
     }));
@@ -22,7 +24,7 @@ export const load: PageServerLoad = async () => {
     return { items: normalized };
 
   } catch (error) {
-    console.error("Failed to load or parse data file:", error);
+    console.error("Failed to load or parse data file from 'static' folder:", error);
     return { items: [] };
   }
 };
