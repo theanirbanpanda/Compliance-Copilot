@@ -1,269 +1,81 @@
-# Compliance Copilot - Day 2 Pipeline
+# 🤖 Compliance Copilot
 
-A comprehensive AI-powered document processing pipeline that extracts text from PDFs, applies intelligent filtering and tagging, and generates structured JSON results with verification reports.
+**An interactive, AI-powered workspace for instantly analyzing and understanding complex regulatory documents.**
 
-## 🚀 Quick Start
+This project is a full-stack, portfolio-ready application demonstrating a complete product lifecycle, from backend data processing with Python and AI to a modern, interactive SvelteKit frontend.
 
-### 1. Setup Environment
+### 🎥 Live Demo Screenshots
 
+
+
+
+**Main Dashboard:**
+
+Screenshot 2025-11-03 at 9.51.27 AM.png
+
+
+
+---
+
+## 🎯 The Product Vision
+
+### The Problem
+Small business owners and startup teams are drowning in complex regulatory documents (tax codes, labor laws, compliance requirements). They don't have the time to read hundreds of pages, and they can't afford expensive legal teams. Missing one update can lead to costly fines or legal issues.
+
+### The Solution
+Compliance Copilot is an interactive tool that solves this. A user can paste any document text, and the AI-powered backend will:
+1.  **Instantly Analyze:** Read the document and provide a simple, 2-sentence summary.
+2.  **Categorize & Tag:** Automatically tag the document with relevant categories (e.g., `finance`, `legal`, `labor`).
+3.  **Verify:** Run the AI's tags against a set of business rules to check for consistency and flag potential issues.
+4.  **Enable Q&A:** Allow the user to "chat" with the document and ask follow-up questions in plain English (e.g., "What is the effective date for the new overtime regulations?").
+5.**Change Alerts :** Based on user interaction ,the information will be stored and user will get alerts if anything changes with time,(ex: tax law changes)
+---
+
+## 🛠️ Technical Architecture
+
+This project is a full-stack application built with a modern, decoupled architecture.
+
+### Backend (`Python / Flask / Gemini`)
+* **API Server:** A **Flask** server provides a local API (with `/api/analyze` and `/api/ask` endpoints).
+* **Data Pipeline:** A robust Python pipeline (`run_pipeline.py`) that uses `requests` and `PyPDF2` to download and extract text from source documents.
+* **AI Engine:** A consolidated `DocumentProcessor` class that uses the **Google Gemini API** for:
+    * **Summarization & Tagging:** Generating insights from raw text.
+    * **RAG (Retrieval-Augmented Generation):** Powering the interactive Q&A feature.
+* **Verification Layer:** A custom-built rules engine (`VERIFICATION_RULES`) that runs after the AI to ensure the quality and consistency of the tagged data.
+
+### Frontend (`SvelteKit / Tailwind CSS`)
+* **Framework:** A fast and modern **SvelteKit** application.
+* **Styling:** A professional, responsive UI built with **Tailwind CSS**.
+* **Interactivity:** The app makes live `fetch` calls to the local Python backend, creating a seamless, full-stack user experience.
+
+---
+
+## 🚀 How to Run This Project Locally
+
+**Prerequisites:**
+* Python 3.9+
+* Node.js & npm
+* A `GEMINI_API_KEY` set in a `.env` file
+
+**1. Setup the Project:**
 ```bash
-# Create and activate virtual environment
+# Clone the repository
+git clone [https://github.com/theanirbanpanda/Compliance-Copilot.git](https://github.com/theanirbanpanda/Compliance-Copilot.git)
+cd Compliance-Copilot
+
+# Create and activate Python virtual environment
 python3 -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
+source venv/bin/activate
 
-# Install dependencies
+# Install Python dependencies
 pip install -r requirements.txt
-```
 
-### 2. Prepare PDF Files
+# Install Frontend dependencies
+cd frontend
+npm install
+cd ..
 
-Place your PDF files in the `downloads/` directory:
-```bash
-mkdir -p downloads
-# Copy your PDF files to downloads/
-```
-
-### 3. Run the Complete Pipeline
-
-```bash
-# Run the entire pipeline in one command
-python3 extract_pdfs.py && python3 scraper/ai_filter.py --live && python3 verify.py
-```
-
-## 📁 Project Structure
-
-```
-Compliance-Copilot/
-├── downloads/                 # Input PDF files
-├── data/                      # Output JSON results
-├── scraper/                   # AI filtering module
-│   └── ai_filter.py
-├── extract_pdfs.py            # PDF text extraction
-├── verify.py                  # Verification reports
-├── requirements.txt           # Dependencies
-└── README.md                  # This file
-```
-
-## 🔧 Individual Module Usage
-
-### PDF Text Extraction
-```bash
-# Extract text from all PDFs in downloads/
-python3 extract_pdfs.py
-```
-
-### AI Filtering (Rule-based)
-```bash
-# Process merged text with rule-based tagging
-python3 scraper/ai_filter.py --live
-```
-
-### AI Filtering (With Gemini API)
-```bash
-# Set your Gemini API key
-export GEMINI_API_KEY="your_api_key_here"
-
-# Run with AI-enhanced tagging
-python3 scraper/ai_filter.py --live
-```
-
-### Verification Report
-```bash
-# Generate comprehensive verification report
-python3 verify.py
-
-# Quick health check
-python3 verify.py --health-check
-```
-
-## 🎯 Features
-
-### PDF Text Extraction (`extract_pdfs.py`)
-- ✅ Extracts text from all PDFs in `downloads/` folder
-- ✅ Merges text into `downloads/merged_output.txt`
-- ✅ Handles extraction errors gracefully
-- ✅ Preserves document boundaries with file markers
-- ✅ Comprehensive logging and progress tracking
-
-### AI Filtering (`scraper/ai_filter.py`)
-- ✅ Intelligent text chunking (1000-1500 characters)
-- ✅ Rule-based domain tagging (8 categories)
-- ✅ Gemini API integration for enhanced tagging
-- ✅ Year detection (4-digit years)
-- ✅ Command-line argument support
-- ✅ Structured JSON output
-
-**Supported Domains:**
-- Finance, Technology, Healthcare, Environment
-- Infrastructure, Legal, Education, Government
-
-### Verification (`verify.py`)
-- ✅ Comprehensive pipeline health checks
-- ✅ Detailed statistics and summaries
-- ✅ Tag distribution analysis
-- ✅ Year detection summary
-- ✅ JSON report generation
-
-## 📊 Output Format
-
-### AI Filtered Results (`data/ai_filtered_results.json`)
-```json
-[
-  {
-    "id": 1,
-    "created_at": "2024-01-15T10:30:00Z",
-    "summary": "Environmental impact report...",
-    "tags": ["environment", "infrastructure"],
-    "detected_years": [2023, 2022],
-    "sample_text": "Environmental Impact Assessment...",
-    "processing_method": "ai_enhanced"
-  }
-]
-```
-
-### Verification Report (`data/verification_report.json`)
-```json
-{
-  "timestamp": "2024-01-15T10:30:00Z",
-  "pdf_count": 5,
-  "merged_output": {
-    "exists": true,
-    "characters": 125000,
-    "files_processed": 5
-  },
-  "ai_results": {
-    "chunks_processed": 45,
-    "tags_summary": {"finance": 12, "technology": 8},
-    "years_detected": [2023, 2022, 2021]
-  }
-}
-```
-
-## 🔧 Command-Line Options
-
-### AI Filter Options
-```bash
-python3 scraper/ai_filter.py [OPTIONS]
-
-Options:
-  --input-file PATH     Input text file (default: downloads/merged_output.txt)
-  --output-file PATH    Output JSON file (default: data/ai_filtered_results.json)
-  --dry-run            Print results without writing to file
-  --live               Write results to output file
-```
-
-### Verification Options
-```bash
-python3 verify.py [OPTIONS]
-
-Options:
-  --data-dir PATH       Data directory (default: data)
-  --downloads-dir PATH  Downloads directory (default: downloads)
-  --health-check        Run health check only
-```
-
-## 🧪 Testing
-
-### Test with Sample Data
-```bash
-# Create sample merged text and test AI filter
-python3 test_ai_filter.py
-```
-
-### End-to-End Pipeline Test
-```bash
-# Run complete pipeline test
-./setup_day2.sh
-```
-
-## 📈 Expected Output
-
-After running the complete pipeline, you should see:
-
-```
-🚀 PDF Text Extraction Pipeline
-==================================================
-📄 Processing: document1.pdf
-✅ Successfully extracted: document1.pdf (15420 chars)
-📊 Extraction Summary:
-   Total PDF files found: 3
-   Successfully extracted: 3
-   Failed extractions: 0
-   Merged output: downloads/merged_output.txt
-   Total characters: 45,230
-
-🤖 AI Filter completed successfully!
-📄 Results saved to: data/ai_filtered_results.json
-Total chunks processed: 28
-Total tags detected: 12
-Tags found: ['finance', 'technology', 'healthcare', 'environment']
-
-🔍 Compliance Copilot - Verification Report
-============================================================
-📄 PDF Files in downloads/: 3
-📝 Merged Output: ✅ Found
-   Files processed: 3
-   Total characters: 45,230
-   File size: 46,512 bytes
-
-🤖 AI Filtered Results: ✅ Found
-   Chunks processed: 28
-   Tags detected: 12
-   Tag distribution:
-     • finance: 8
-     • technology: 6
-     • healthcare: 4
-   Years detected: 3
-   Years: [2021, 2022, 2023]
-
-📊 Pipeline Summary:
-   PDF files found: 3
-   Files processed: 3
-   Text characters: 45,230
-   Chunks created: 28
-   Unique tags: 12
-   Years detected: 3
-
-🏥 Pipeline Health Check:
-   Merged output: ✅
-   AI results: ✅
-   Overall status: ✅ HEALTHY
-```
-
-## 🔑 Environment Variables
-
-### Gemini API (Optional)
-```bash
-export GEMINI_API_KEY="your_gemini_api_key_here"
-```
-
-## 🐛 Troubleshooting
-
-### Common Issues
-
-1. **No PDFs found**: Ensure PDF files are in `downloads/` directory
-2. **Extraction fails**: Check if PDFs are password-protected or corrupted
-3. **AI filter fails**: Verify `merged_output.txt` exists and has content
-4. **Gemini API errors**: Check API key and internet connection
-
-### Debug Mode
-```bash
-# Enable detailed logging
-export PYTHONPATH=.
-python3 -c "
-import logging
-logging.basicConfig(level=logging.DEBUG)
-# Run your command here
-"
-```
-
-## 📝 License
-
-This project is part of the Compliance Copilot system for automated document processing and AI-powered compliance analysis.
-
-## 🤝 Contributing
-
-1. Ensure all tests pass: `python3 verify.py --health-check`
-2. Follow the modular architecture
-3. Add comprehensive logging
-4. Update documentation for new features
+#TO Run:
+python run_pipeline.py
+cd frontend
+npm run dev
