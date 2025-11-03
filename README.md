@@ -10,7 +10,7 @@ This project is a full-stack, portfolio-ready application demonstrating a comple
 
 
 **Main Dashboard:**
-![Dashboard](<Assets/Screenshot 2025-11-03 at 9.51.27 AM.png>)
+![Dashboard](<Assets/Screenshot.jpeg>)
 
 
 
